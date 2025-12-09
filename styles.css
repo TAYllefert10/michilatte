@@ -30,7 +30,10 @@ img {
     display: block;
 }
 
-/* HEADER */
+/* ======================================= */
+/*                   HEADER                 */
+/* ======================================= */
+
 header {
     position: sticky;
     top: 0;
@@ -82,11 +85,11 @@ header {
 .nav-links a {
     padding: 0.4rem 0.9rem;
     border-radius: 999px;
-    background: transparent;
     transition: background 0.18s ease, transform 0.18s ease;
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-links a.active {
     background: rgba(199, 154, 106, 0.15);
     transform: translateY(-1px);
 }
@@ -94,15 +97,14 @@ header {
 .nav-cta {
     padding: 0.4rem 1rem;
     border-radius: 999px;
-    border: none;
-    cursor: pointer;
     background: linear-gradient(135deg, #e8b060, #c79a6a);
     color: #fff;
+    border: none;
+    cursor: pointer;
     font-size: 0.85rem;
     font-weight: 600;
     box-shadow: 0 8px 18px rgba(199, 154, 106, 0.35);
     transition: transform 0.15s ease, box-shadow 0.15s ease;
-    white-space: nowrap;
 }
 
 .nav-cta:hover {
@@ -110,20 +112,35 @@ header {
     box-shadow: 0 12px 26px rgba(199, 154, 106, 0.45);
 }
 
+/* ======================================= */
+/*                  MAIN                    */
+/* ======================================= */
+
 main {
     max-width: 1100px;
     margin: 0 auto;
     padding: 1.8rem 1.4rem 3rem;
 }
 
-/* HERO (Inicio) */
+section {
+    margin-top: 2.4rem;
+}
+
+.section-header h2 {
+    margin: 0;
+    font-size: 1.4rem;
+    color: var(--marron-oscuro);
+}
+
+/* ======================================= */
+/*                 HERO (Index)             */
+/* ======================================= */
+
 .hero {
     display: grid;
-    grid-template-columns: minmax(0, 1.5fr) minmax(0, 1.3fr);
+    grid-template-columns: 1.5fr 1.3fr;
     gap: 2rem;
-    align-items: center;
     padding: 1.4rem 1.6rem;
-    margin-top: 0.8rem;
     border-radius: 26px;
     background: linear-gradient(135deg, #fdf7ed 0, #f5e1c2 40%, #f0d4af 100%);
     box-shadow: var(--shadow-suave);
@@ -133,13 +150,6 @@ main {
     font-size: clamp(1.9rem, 3vw, 2.4rem);
     margin: 0 0 0.7rem;
     color: var(--marron-oscuro);
-}
-
-.hero-text p {
-    margin: 0 0 1rem;
-    max-width: 32rem;
-    font-size: 0.95rem;
-    line-height: 1.6;
 }
 
 .hero-tags {
@@ -153,152 +163,129 @@ main {
     font-size: 0.75rem;
     padding: 0.25rem 0.8rem;
     border-radius: 999px;
-    background: rgba(255, 255, 255, 0.85);
     border: 1px solid rgba(199, 154, 106, 0.4);
-}
-
-.hero-actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
-    align-items: center;
+    background: white;
 }
 
 .btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.4rem;
     padding: 0.55rem 1.1rem;
     border-radius: 999px;
-    border: none;
-    cursor: pointer;
-    font-size: 0.85rem;
     font-weight: 600;
-    transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+    cursor: pointer;
+    border: none;
 }
 
 .btn-primary {
     background: linear-gradient(135deg, #e8b060, #c79a6a);
-    color: #fff;
-    box-shadow: 0 10px 22px rgba(199, 154, 106, 0.4);
-}
-
-.btn-primary:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 14px 30px rgba(199, 154, 106, 0.5);
+    color: white;
 }
 
 .btn-ghost {
     background: rgba(248, 243, 233, 0.9);
-    border: 1px solid rgba(199, 154, 106, 0.5);
-    color: var(--marron-oscuro);
+    border: 1px solid rgba(199,154,106,0.5);
 }
 
-.btn-ghost:hover {
-    background: #f8f3e9;
-    transform: translateY(-1px);
-}
+/* ======================================= */
+/*          CARTA — DISEÑO NUEVO           */
+/* ======================================= */
 
-/* HERO IMG */
-.hero-image-frame {
-    border-radius: 18px;
-    overflow: hidden;
-    background: #f8f3e9;
-}
-
-.hero-floating {
-    position: absolute;
-    right: 0.4rem;
-    bottom: -0.4rem;
-    transform: translateY(40%);
-    background: #fff8ee;
-    border-radius: 14px;
-    padding: 0.5rem 0.7rem;
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
-    font-size: 0.75rem;
-}
-
-/* SECCIONES */
-section {
-    margin-top: 2.4rem;
-}
-
-.section-header h2 {
-    margin: 0;
-    font-size: 1.3rem;
-    color: var(--marron-oscuro);
-}
-
-/* CARTA */
-.menu-layout {
+.menu-layout-clean {
     display: grid;
-    grid-template-columns: minmax(0, 1.65fr) minmax(0, 1.1fr);
-    gap: 1.8rem;
+    grid-template-columns: 2fr 1fr;
+    gap: 2.5rem;
 }
 
-.menu-group h3 {
-    margin: 0 0 0.6rem;
+.menu-group-clean {
+    margin-bottom: 2.2rem;
+}
+
+.menu-group-clean h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.7rem;
+    color: var(--marron-oscuro);
+}
+
+.menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.7);
+    box-shadow: var(--shadow-suave);
+}
+
+.menu-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.65rem 1rem;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+    font-size: 0.95rem;
+}
+
+.menu-list li:last-child {
+    border-bottom: none;
+}
+
+.menu-list strong {
+    color: var(--marron-oscuro);
+}
+
+.menu-group-clean h4,
+.menu-group-clean h5 {
+    margin: 1.2rem 0 0.4rem;
+    color: var(--marron-oscuro);
+}
+
+.mini-list {
+    padding-left: 1rem;
+    margin: 0;
+    opacity: 0.85;
+    font-size: 0.9rem;
+}
+
+/* ======================================= */
+/*                 COMBOS                  */
+/* ======================================= */
+
+.combo-panel {
+    background: white;
+    padding: 1.4rem;
+    border-radius: 16px;
+    box-shadow: var(--shadow-suave);
+    height: fit-content;
+}
+
+.combo-panel h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.combo-item {
+    margin-bottom: 1.5rem;
+}
+
+.combo-item h4 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: var(--marron-oscuro);
+}
+
+.combo-price {
+    margin-top: 0.4rem;
+    font-weight: bold;
     font-size: 1rem;
     color: var(--marron-oscuro);
 }
 
-.menu-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
-    gap: 0.9rem;
+.combo-price span {
+    font-size: 0.8rem;
+    opacity: 0.7;
 }
 
-.menu-card {
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: var(--radius-xl);
-    padding: 0.65rem;
-    display: grid;
-    grid-template-columns: 80px 1fr;
-    gap: 0.65rem;
-    box-shadow: var(--shadow-suave);
-}
+/* ======================================= */
+/*              GATOS EN ADOPCIÓN          */
+/* ======================================= */
 
-.menu-thumb {
-    border-radius: 16px;
-    overflow: hidden;
-}
-
-.menu-title-row {
-    display: flex;
-    justify-content: space-between;
-}
-
-.menu-title {
-    font-size: 0.9rem;
-    font-weight: 600;
-}
-
-.menu-price {
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: var(--marron-oscuro);
-}
-
-.menu-desc {
-    font-size: 0.78rem;
-    opacity: 0.9;
-}
-
-.menu-tag {
-    font-size: 0.7rem;
-    opacity: 0.8;
-}
-
-/* COMBOS */
-.menu-summary {
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: 20px;
-    padding: 1rem;
-    box-shadow: var(--shadow-suave);
-}
-
-/* GATOS */
 .cats-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
@@ -306,71 +293,69 @@ section {
 }
 
 .cat-card {
-    background: rgba(255,255,255,0.96);
-    border-radius: var(--radius-xl);
-    padding: 0.8rem;
+    background: white;
+    padding: 0.9rem;
+    border-radius: 16px;
     box-shadow: var(--shadow-suave);
 }
 
-.cat-photo {
-    height: 170px;
-    overflow: hidden;
-    border-radius: 16px;
-}
-
 .cat-name {
-    font-weight: 600;
-    font-size: 0.95rem;
+    font-weight: bold;
+    font-size: 1rem;
+    color: var(--marron-oscuro);
 }
 
-.cat-meta {
-    font-size: 0.78rem;
-}
+/* ======================================= */
+/*                FORMULARIOS              */
+/* ======================================= */
 
-.cat-tags span {
-    padding: 0.15rem 0.55rem;
-    border-radius: 999px;
-    background: #fdf3e6;
-    border: 1px solid rgba(199,154,106,0.4);
-    font-size: 0.7rem;
-}
-
-/* FORMULARIOS (donaciones / reservar) */
 form {
-    background: rgba(255,255,255,0.97);
-    border-radius: 20px;
+    background: rgba(255,255,255,0.95);
     padding: 1rem;
+    border-radius: 16px;
     box-shadow: var(--shadow-suave);
 }
 
 input, select, textarea {
     width: 100%;
-    padding: 0.45rem 0.55rem;
+    padding: 0.55rem;
     border-radius: 10px;
     border: 1px solid rgba(199,154,106,0.55);
     background: #fdf7ed;
-    font: inherit;
 }
 
-/* FOOTER */
+/* ======================================= */
+/*                  FOOTER                 */
+/* ======================================= */
+
 footer {
     border-top: 1px solid rgba(199,154,106,0.3);
-    padding: 1.2rem 1.4rem;
-    font-size: 0.78rem;
+    padding: 1.2rem;
     text-align: center;
-    margin-top: 2rem;
+    font-size: 0.8rem;
 }
 
-/* RESPONSIVE */
+/* ======================================= */
+/*               RESPONSIVE                */
+/* ======================================= */
+
 @media (max-width: 900px) {
-    .hero,
-    .menu-layout {
+    .hero {
         grid-template-columns: 1fr;
+    }
+
+    .menu-layout-clean {
+        grid-template-columns: 1fr;
+    }
+
+    .combo-panel {
+        margin-top: 2rem;
     }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 600px) {
     .nav {
         flex-wrap: wrap;
+        justify-content: center;
     }
 }
