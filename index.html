@@ -2,13 +2,13 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8" />
-    <title>Mishilatte - Inicio</title>
+    <title>Mishilatte - Cat Café & Adopciones</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css">
 </head>
 
-
 <body>
+
 <header>
     <div class="nav">
         <div class="logo">
@@ -17,70 +17,75 @@
         </div>
 
         <nav class="nav-links">
-            <a href="index.html">Inicio</a>
+            <a href="index.html" class="active">Inicio</a>
             <a href="carta.html">Carta</a>
             <a href="gatos.html">Gatos en adopción</a>
             <a href="donaciones.html">Donaciones y apadrinar</a>
         </nav>
 
-        <button class="nav-cta" onclick="location.href='reservar.html'">
-            Reservar visita
-        </button>
+        <button class="nav-cta" onclick="location.href='reservar.html'">Reservar visita</button>
     </div>
 </header>
 
 <main>
 
-    <section id="inicio" class="hero">
-        <div class="hero-text">
-            <div class="hero-tags">
-                <span class="tag-pill">Cat café · Adopciones responsables</span>
-                <span class="tag-pill">Café de especialidad</span>
-            </div>
+<!-- ===================================================== -->
+<!--                       HERO NUEVO                      -->
+<!-- ===================================================== -->
 
-            <h1>Mishilatte: café, ronroneos y segundas oportunidades.</h1>
+<section class="hero-simple">
+    <div class="hero-content">
+        <h1>Mishilatte</h1>
+        <p class="hero-subtitle">
+            Cat Café · Adopciones responsables · Café de especialidad
+        </p>
 
-            <p>
-                Disfruta de tu bebida favorita en un ambiente acogedor mientras convives con gatos rescatados
-                que buscan un hogar. Cada café ayuda a cubrir comida, arena y cuidados veterinarios.
-            </p>
+        <p class="hero-description">
+            Un espacio donde disfrutar de un buen café mientras ayudas a dar 
+            segundas oportunidades a gatos rescatados.  
+            Cada visita contribuye al bienestar, alimentación y cuidados veterinarios
+            de nuestros felinos.
+        </p>
 
-            <div class="hero-actions">
-                <button class="btn btn-primary" onclick="location.href='carta.html'">Ver carta</button>
-                <button class="btn btn-ghost" onclick="location.href='donaciones.html'">Donar / Apadrinar</button>
-            </div>
+        <div class="hero-buttons">
+            <button class="btn btn-primary" onclick="location.href='carta.html'">
+                Ver Carta
+            </button>
 
-            <p class="hero-note">
-                ⚠️ Los gatos solo pueden ser adoptados tras entrevista y formulario responsable.
-            </p>
+            <button class="btn btn-ghost" onclick="location.href='gatos.html'">
+                Conocer a los Gatos
+            </button>
         </div>
+    </div>
+</section>
 
-        <div class="hero-visual">
-            <div class="hero-card">
-                <div class="hero-card-title">
-                    <h2>Carta felina destacada</h2>
-                    <span class="mini-badge">Hecho con amor y patitas 🐾</span>
-                </div>
+<!-- ===================================================== -->
+<!--                  SECCIÓN DESTACADA                    -->
+<!-- ===================================================== -->
 
-                <div class="hero-menu-preview">
-                    <div class="hero-menu-items">
-                        <div class="hero-menu-item"><span>Latte “Michi Mimoso”</span><span>2,90 €</span></div>
-                        <div class="hero-menu-item"><span>Cappuccino “Gato Travieso”</span><span>3,10 €</span></div>
-                        <div class="hero-menu-item"><span>Sándwich “Mishi Club”</span><span>5,80 €</span></div>
-                        <div class="hero-menu-item"><span>Combo “Mishi Brunch”</span><span>9,90 €</span></div>
-                    </div>
+<section class="highlight">
+    <h2>Un Cat Café con Propósito</h2>
+    <p>
+        Mishilatte combina la experiencia de una cafetería moderna con un espacio seguro 
+        y tranquilo para gatos en busca de adopción.  
+        Nuestro equipo trabaja con asociaciones locales para garantizar adopciones responsables.
+    </p>
 
-                    <div class="hero-image-frame">
-                        <img src="bebidas/Mishi_Mimoso.jpg" alt="Latte Michi Mimoso">
-                    </div>
-                </div>
-
-                <div class="hero-floating">
-                    Cada consumición aporta al <strong>bienestar</strong> de nuestros gatos.
-                </div>
-            </div>
+    <div class="highlight-grid">
+        <div class="highlight-item">
+            <h3>☕ Café de especialidad</h3>
+            <p>Bebidas elaboradas con café de tueste natural, opciones veganas y bebidas saludables.</p>
         </div>
-    </section>
+        <div class="highlight-item">
+            <h3>🐱 Convivencia con gatos</h3>
+            <p>Interactúa con felinos rescatados en un entorno tranquilo, seguro y supervisado.</p>
+        </div>
+        <div class="highlight-item">
+            <h3>❤️ Adopciones responsables</h3>
+            <p>Si conectas con alguno, te guiamos en el proceso para encontrar un hogar adecuado.</p>
+        </div>
+    </div>
+</section>
 
 </main>
 
