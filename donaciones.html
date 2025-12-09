@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Donaciones y Apadrinar · Mishilatte</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header>
+    <div class="nav">
+        <div class="logo"><div class="logo-mark">🐾</div>Mishilatte</div>
+
+        <nav class="nav-links">
+            <a href="index.html">Inicio</a>
+            <a href="carta.html">Carta</a>
+            <a href="gatos.html">Gatos en adopción</a>
+            <a href="donaciones.html">Donaciones y apadrinar</a>
+        </nav>
+
+        <button class="nav-cta" onclick="location.href='reservar.html'">Reservar visita</button>
+    </div>
+</header>
+
+<main>
+    <section id="donaciones">
+        <div class="section-header">
+            <div>
+                <h2>Donaciones y Apadrinar</h2>
+                <p>Cada ayuda cuenta. Gracias por apoyar a nuestros felinos.</p>
+            </div>
+        </div>
+
+        <div class="form-grid">
+
+            <form>
+                <h3 class="form-title">Ayuda con una donación</h3>
+
+                <div class="form-row">
+                    <label>Nombre</label>
+                    <input type="text" required>
+                </div>
+
+                <div class="form-row">
+                    <label>Correo electrónico</label>
+                    <input type="email" required>
+                </div>
+
+                <div class="form-row">
+                    <label>Tipo de ayuda</label>
+                    <select>
+                        <option>Donación puntual</option>
+                        <option>Apadrinar un gato</option>
+                        <option>Material (pienso, arena...)</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <label>Comentarios</label>
+                    <textarea></textarea>
+                </div>
+
+                <button class="btn btn-primary">Enviar</button>
+            </form>
+
+            <div class="donation-card">
+                <h3>Opciones disponibles</h3>
+
+                <div class="donation-options">
+                    <div class="donation-pill">Apadrinar desde 10€/mes</div>
+                    <div class="donation-pill">Donación puntual</div>
+                    <div class="donation-pill">Material felino</div>
+                </div>
+
+                <p>Te contactaremos con los métodos de pago (Bizum, transferencia o en local).</p>
+            </div>
+
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="footer-inner">
+        <span>© Mishilatte</span><span>Maqueta educativa.</span>
+    </div>
+</footer>
+
+</body>
+</html>
