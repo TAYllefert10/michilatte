@@ -6,6 +6,101 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css">
 </head>
+<!-- AVISO DE COOKIES -->
+<div id="cookie-banner" class="cookie-banner">
+    <p>
+        Utilizamos cookies propias para mejorar la experiencia del usuario.
+        Puedes aceptar o rechazar el uso de cookies.
+        <a href="politica-privacidad.html">Más información</a>.
+    </p>
+    <div class="cookie-buttons">
+        <button id="accept-cookies">Aceptar</button>
+        <button id="reject-cookies">Rechazar</button>
+    </div>
+</div>
+
+<style>
+    .cookie-banner {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #222;
+        color: #fff;
+        padding: 15px 20px;
+        display: none;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        z-index: 9999;
+        font-size: 0.9em;
+    }
+
+    .cookie-banner p {
+        margin: 0;
+        max-width: 70%;
+    }
+
+    .cookie-banner a {
+        color: #ffd166;
+        text-decoration: underline;
+    }
+
+    .cookie-buttons {
+        display: flex;
+        gap: 10px;
+    }
+
+    .cookie-buttons button {
+        border: none;
+        padding: 8px 14px;
+        cursor: pointer;
+        border-radius: 4px;
+        font-weight: bold;
+    }
+
+    #accept-cookies {
+        background-color: #4CAF50;
+        color: #fff;
+    }
+
+    #reject-cookies {
+        background-color: #f44336;
+        color: #fff;
+    }
+
+    @media (max-width: 768px) {
+        .cookie-banner p {
+            max-width: 100%;
+            margin-bottom: 10px;
+        }
+    }
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const banner = document.getElementById("cookie-banner");
+        const acceptBtn = document.getElementById("accept-cookies");
+        const rejectBtn = document.getElementById("reject-cookies");
+
+        const cookieChoice = localStorage.getItem("cookiesAccepted");
+
+        if (!cookieChoice) {
+            banner.style.display = "flex";
+        }
+
+        acceptBtn.addEventListener("click", function () {
+            localStorage.setItem("cookiesAccepted", "yes");
+            banner.style.display = "none";
+        });
+
+        rejectBtn.addEventListener("click", function () {
+            localStorage.setItem("cookiesAccepted", "no");
+            banner.style.display = "none";
+        });
+    });
+</script>
+<!-- FIN AVISO DE COOKIES -->
 
 <body>
 
